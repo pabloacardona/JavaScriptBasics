@@ -29,7 +29,8 @@ label {
     color: #555;
 }
 
-input[type="text"],
+input[type="nombre"],
+input[type="apikey"],
 input[type="email"] {
     width: 100%;
     padding: 10px;
@@ -39,7 +40,9 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
-input[type="text"]:focus,
+
+input[type="nombre"]:focus,
+input[type="apikey"]:focus,
 input[type="email"]:focus {
     border-color: #ff0000;
     outline: none;
