@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con JS</title>
+</head>
+<body>
+    <h2>Operaciones con JavaScript</h2>
+    <button onclick="pedirDatos()">Ingresar datos</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function pedirDatos() {
+
+            let suNombre = prompt("Ingrese su nombre: ");
+            let num1 = parseFloat(prompt("Ingrese el primer número: "));
+            let num2 = parseFloat(prompt("Ingrese el segundo número: "));
+
+            let suma = num1 + num2;
+            let resta = num1 - num2;
+            let multiplicacion = num1 * num2;
+            let division = (num2 !== 0) ? (num1 / num2): "No se puede dividir entre 0";
+
+            let salida = `
+                <h3>Hola ${suNombre}, aquí están tus resultados:</h3>
+                <ul>
+                    <li>Suma: ${num1} + ${num2} = ${suma}</li>
+                    <li>Resta: ${num1} - ${num2} = ${resta}</li>
+                    <li>Multiplicación: ${num1} × ${num2} = ${multiplicacion}</li>
+                    <li>División: ${num1} ÷ ${num2} = ${division}</li>
+                </ul>
+            `;
+
+            document.getElementById("resultado").innerHTML = salida;
+        }
+
+    </script>
+
+</body>
+</html>
